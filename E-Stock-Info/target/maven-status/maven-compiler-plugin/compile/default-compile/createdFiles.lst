@@ -1,0 +1,8 @@
+com\estock\model\Stock.class
+com\estock\service\StockService.class
+com\estock\serviceimpl\StockServiceImpl.class
+com\estock\repository\StockPriceRepository.class
+com\estock\entity\StockPriceEntity.class
+com\estock\SwaggerConfig.class
+com\estock\controller\StockInfoController.class
+com\estock\StockInfoApplication.class
