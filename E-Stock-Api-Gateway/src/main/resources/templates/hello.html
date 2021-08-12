@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Hello World!</title>
+        <style>
+			table {
+			  font-family: arial, sans-serif;
+			  border-collapse: collapse;
+			  width: 100%;
+			}
+			
+			td, th {
+			  border: 1px solid #dddddd;
+			  text-align: left;
+			  padding: 8px;
+			}
+			
+			tr:nth-child(even) {
+			  background-color: #dddddd;
+			}
+			</style>
+    </head>
+    <body>
+        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <table>        	
+        	<tr>
+        		<th>Name</th>
+        		<th>User Name</th>
+        		<th>Email</th>
+        		<th>Address</th>
+        		<th>Credit Score</th>
+        		<th>Due Status</th>
+        		<th>Due Approval Status</th>        		
+        	</tr>	
+        	<tr th:each="message : ${messages}">
+		           <td th:text="${message.name}">1</td>
+		           <td th:text="${message.username}">1</td>
+		           <td th:text="${message.email}">1</td>
+		           <td th:text="${message.address}">1</td>		           
+		           <td th:text="${message.score}">1</td>
+		           <td th:text="${message.duestatus}">1</td>
+		           <td th:text="${message.dueapproval}">1</td>		           		         
+		     </tr>      
+        </table>
+        
+        </br></br>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
