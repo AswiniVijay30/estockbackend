@@ -1,0 +1,6 @@
+2021-07-28 06:02:18.394 ERROR   --- [main] c.e.controller.CompanyInfoController     : Comapny Code Already Exists
+2021-07-28 06:02:23.020 ERROR   --- [main] c.e.controller.CompanyInfoController     : Comapny Code Already Exists
+2021-07-28 21:43:48.423 ERROR   --- [main] c.e.controller.CompanyInfoController     : Comapny Code Already Exists
+2021-07-28 21:43:48.556 ERROR   --- [main] c.e.controller.CompanyInfoController     : Comapny Code Already Exists
+2021-07-28 21:46:49.724 ERROR   --- [main] c.e.controller.CompanyInfoController     : Comapny Code Already Exists
+2021-07-28 21:46:50.010 ERROR   --- [main] c.e.controller.CompanyInfoController     : Comapny Code Already Exists
