@@ -1,0 +1,36 @@
+CREATE TABLE CUSTOMER(UserId INT PRIMARY KEY,   Name VARCHAR(255) ,   UserName VARCHAR(255),    Address VARCHAR(255), Email  VARCHAR(255) , State  VARCHAR(255)
+,Country VARCHAR(255),  DOB Date, PAN  VARCHAR(255), contact VARCHAR(255), Account VARCHAR(255), Password VARCHAR(255),
+ Score INT(255),DueStatus VARCHAR(255),DueApproval VARCHAR(255));
+
+create sequence DUE_SEQ
+create sequence CUSTOMER_SEQ
+
+CREATE TABLE CUSTOMER_DUE_STATUS(Id INT PRIMARY KEY,   CustomerId INT ,   PaymentHistory LONG,    CreditcardHistory LONG, LoanHistory LONG , NoofAccountsHistory LONG);
+
+
+{
+  "name" : "Mike",
+  "email" : "mike@gmail.com",
+  "username" : "mike123",
+  "address" : "st jonh's street",
+  "state" : "TAMILNADU",
+  "country" : "INDIA",
+  "dob" : "2018-03-29",
+  "pan" : "DDAAGAGD",
+  "contact" : "9933992211",
+  "account" : "Standard",
+  "password" : "mike@123"
+}
+{
+  "account": "Standard",
+  "address": "St jonh's street",
+  "contact": "9933992211",
+  "country": "INDIA",
+  "dob": "1993-08-13T06:21:35.746Z",
+  "email": "mike@gmail.com",
+  "name": "Mike",
+  "pan": "DDAAGAGD",
+  "password": "mike@123",
+  "state": "TAMILNADU",
+  "username": "mike@123"
+}
