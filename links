@@ -1,0 +1,58 @@
+	swagger-ui
+	---------
+	http://localhost:8081/swagger-ui.html#!/company-info-controller/deleteUsingGET
+	http://localhost:8084/swagger-ui.html#!/stock-info-controller/fetchStockPriceUsingGET
+
+
+	Promethesus
+	 ---------
+	 http://localhost:8081/actuator
+	 http://localhost:8081/actuator/prometheus
+	 http://172.18.16.241:9090/graph?g0.expr=go_memstats_heap_alloc_bytes&g0.tab=0&g0.stacked=0&g0.range_input=1h&g1.expr=&g1.tab=1&g1.stacked=0&g1.range_input=1h&g1.end_input=2021-07-24%2021%3A43%3A55&g1.moment_input=2021-07-24%2021%3A43%3A55
+
+	 
+	 ELK:
+	 ----
+	 localhost:9200
+	
+	 kibana
+	 -------
+	 localhost:5601
+	 http://localhost:5601/app/discover#/?_g=(filters:!(),query:(language:kuery,query:''),refreshInterval:(pause:!f,value:10000),time:(from:'2021-07-26T07:30:00.000Z',to:now))&_a=(columns:!(),filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'6e8a2f90-eec5-11eb-a70c-f7f80bddebd3',key:message,negate:!f,params:(query:'26-07-2021%2013:24:19.150%20%5Bhttp-nio-8081-exec-5%5D%20INFO%20%20c.e.controller.CompanyInfoController.createCompany%20-%20New%20Company%20is%20Registered%0D'),type:phrase),query:(match_phrase:(message:'26-07-2021%2013:24:19.150%20%5Bhttp-nio-8081-exec-5%5D%20INFO%20%20c.e.controller.CompanyInfoController.createCompany%20-%20New%20Company%20is%20Registered%0D')))),index:'6e8a2f90-eec5-11eb-a70c-f7f80bddebd3',interval:auto,query:(language:kuery,query:''),sort:!(!('@timestamp',asc)))
+	 
+	 ecinst-estock- pem key in ec2 instance
+	 https://estock-aws.s3.us-east-2.amazonaws.com/E-Stock-Customer-Info-0.0.1-SNAPSHOT.jar
+	 https://awsbucketcustinfo.s3.us-east-2.amazonaws.com/E-Stock-Customer-Info-0.0.1-SNAPSHOT.jar
+	 
+	 s3 bucket
+	 ---------
+	 http://estockui.s3-website.us-east-2.amazonaws.com/
+	 
+	 Elastic beanstalk
+	 ---------------
+	 http://stockinfo-env.eba-npn3t3i5.us-east-2.elasticbeanstalk.com/
+	 http://stockinfo-env.eba-npn3t3i5.us-east-2.elasticbeanstalk.com/api/v1.0/market/stock/get/RELPOW/2021-07-28/2021-07-29
+	 
+	 http://stockinfo-env.eba-npn3t3i5.us-east-2.elasticbeanstalk.com/api/v1.0/market/stock/add/RELPOW?stockPrice=7865.67
+	 http://stockinfo-env.eba-npn3t3i5.us-east-2.elasticbeanstalk.com/api/v1.0/market/stock/add/RELPOW?stockPrice=4532
+	 http://stockinfo-env.eba-npn3t3i5.us-east-2.elasticbeanstalk.com/api/v1.0/market/stock/add/ASIANPT?stockPrice=8345.23
+	 http://stockinfo-env.eba-npn3t3i5.us-east-2.elasticbeanstalk.com/api/v1.0/market/stock/add/ASIANPT?stockPrice=67840.45
+	 http://stockinfo-env.eba-npn3t3i5.us-east-2.elasticbeanstalk.com/api/v1.0/market/stock/add/HDU?stockPrice=9876.45
+	 http://stockinfo-env.eba-npn3t3i5.us-east-2.elasticbeanstalk.com/api/v1.0/market/stock/add/HDU?stockPrice=7564.34
+	 http://stockinfo-env.eba-npn3t3i5.us-east-2.elasticbeanstalk.com/api/v1.0/market/stock/add/INDIACEM?stockPrice=9800
+	 http://stockinfo-env.eba-npn3t3i5.us-east-2.elasticbeanstalk.com/api/v1.0/market/stock/add/INDIACEM?stockPrice=5432.89
+	 
+	 http://stockinfo-env.eba-npn3t3i5.us-east-2.elasticbeanstalk.com/api/v1.0/market/stock/get/RELPOW/2021-07-28/2021-07-29
+	 http://stockinfo-env.eba-npn3t3i5.us-east-2.elasticbeanstalk.com/api/v1.0/market/stock/get/HDU/2021-07-28/2021-07-29
+	 http://stockinfo-env.eba-npn3t3i5.us-east-2.elasticbeanstalk.com/api/v1.0/market/stock/get/ASIANPT/2021-07-28/2021-07-29
+	 http://stockinfo-env.eba-npn3t3i5.us-east-2.elasticbeanstalk.com/api/v1.0/market/stock/get/INDIACEM/2021-07-28/2021-07-29
+	 
+	 docker commands
+	 --------------
+	 docker build -t 789422/cusinfo .
+	 docker run -p 80:8081 dockerimgname
+	 docker tag "imageId" 789422/customerinfostock:latest 
+	   
+	 docker push 789422/customerinfostock:latest
+	 id:789422
+	 pwd:Chinnu25@2020
